@@ -1,5 +1,6 @@
 var results = document.getElementById("search-results");
-var zipCodeEl = document.getElementById("zipcode").value;
+// var zipCodeEl;
+// var animalZipCode;
 
 var clientKey = "5dYu5nCemONh8dz1t3pshWYHA5Z5oQL2ZkjuAgijqEabt7NKMVSz0ZqjkpA3j54i";
 
@@ -102,27 +103,12 @@ function searchPet() {
     fetchCats();
     //debugger;
   }
-  var zipCodeEl = document.getElementById("zipcode").value;
 
-  console.log(zipCodeEl);
+ 
+ 
 }
 
 
-// function for comparing two zip code 
-function compareZipCode(){
-  
-  var zipCodeApiUrl = "https://www.zipcodeapi.com/rest/" + clientKey + "/distance.json/" + zipCodeEl +"/"+ zipCode +"/mile"
-  fetch (zipCodeApiUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-  console.log(data);
-  compareZipCode();
-  })
-  }
-  
- 
 
 // the display function
 function displayPet(pets, location, distance) {
@@ -170,10 +156,12 @@ function displayPet(pets, location, distance) {
     var zipCode = document.createElement("p");
     zipCode.textContent += "Zip Code: " + location[i].attributes.postalcode;
     petCard.appendChild(zipCode);
-
     console.log(zipCode);
-    petCard.appendChild(zipCode);
-
+ 
+    //Get the value of the api zipcodes
+    var animalZipCode = location[i].attributes.postalcode;
+    console.log(animalZipCode);
+    compareZipCode(animalZipCode);
 
     var contactEl = document.createElement("p");
     contactEl.textContent = "Contact No: " + location[i].attributes.phone;
@@ -190,5 +178,20 @@ function displayPet(pets, location, distance) {
   };
  
 
+// function for comparing two zip code 
+function compareZipCode(zipCodeEl, animalZipCode){
+  var zipCodeEl = document.getElementById("zipcode").value;
+  console.log(zipCodeEl);
 
+
+  var zipCodeApiUrl = "https://www.zipcodeapi.com/rest/" + clientKey + "/distance.json/" + zipCodeEl +"/"+ animalZipCode +"/mile"
+  fetch (zipCodeApiUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+  console.log(data);
+  
+  })
+  }
 
