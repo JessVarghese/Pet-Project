@@ -32,10 +32,10 @@
  ## API
   [RescueGroups.org](https://rescuegroups.org/services/adoptable-pet-data-api/)
 
-  [ZipApi](https://zipapi.us/)
+  [ZipCodeAPI](https://www.zipcodeapi.com/)
 
  ## Visuals
-
+ <img src="./images/pet-proj2.png" width="500"/>
 
   ## License
   This project operates under the [MIT](https://choosealicense.com/licenses/MIT/) license.
