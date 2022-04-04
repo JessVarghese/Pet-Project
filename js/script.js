@@ -110,6 +110,7 @@ function searchPet() {
 
 // function for comparing two zip code 
 function compareZipCode(){
+  
   var zipCodeApiUrl = "https://www.zipcodeapi.com/rest/" + clientKey + "/distance.json/" + zipCodeEl +"/"+ zipCode +"/mile"
   fetch (zipCodeApiUrl)
   .then(function (response) {
@@ -117,7 +118,7 @@ function compareZipCode(){
   })
   .then(function (data) {
   console.log(data);
-  compareZipCode(data.distance);
+  compareZipCode();
   })
   }
   
@@ -133,7 +134,7 @@ function displayPet(pets, location, distance) {
     //creating a span to hold the pets information
     var petCard = document.createElement("span");
     petCard.className = "box has-background-success-light";
-    petCard.setAttribute("style", "-webkit-box-shadow");
+    petCard.setAttribute("style", "margin: 50px 50px; padding: 0 50px;");
     results.appendChild(petCard);
 
     // creating the picture of the pet
@@ -181,12 +182,12 @@ function displayPet(pets, location, distance) {
     var farFrom = document.createElement("p");
     farFrom.textContent = "You are: " + distance + " miles away from this pet.";
     farFrom.setAttribute("style", "background-color:red; color: white;")
-    results.appendChild(farFrom);
+    petCard.appendChild(farFrom);
     console.log(farFrom);
 
     }   
   }
-  }
+  };
  
 
 

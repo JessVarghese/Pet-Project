@@ -21,9 +21,9 @@
 
 <body class="bgImage">
   <!--About the site -->
-  <main>
+  <main class="section is-small about">
 
-    <section class="section is-small about">
+    
       <h1 class="title has-text-white has-text-centered">Welcome to The Pet Project!</h1>
       <h2 class="subtitle has-text-white has-text-centered">
         This simple application utilizes the <a href="https://rescuegroups.org/services/adoptable-pet-data-api/"
@@ -55,24 +55,22 @@
           <label class="label  has-text-white is-size-5">User location</label>
           <div class="control">
             
-            <input class="input" type="text" placeholder="Enter Zip Code" id="zipcode">
+            <input class="input" type="text" name ="user-zip" placeholder="Enter Zip Code" id="zipcode">
             <input class="button is-primary is-active" type="submit" value="Search" id="submitbtn">
           </div>
         </div>
       </form>
-    </section>
+   
+  </main>
 
  <!-- Display search results-->
  <section class="container" id="search-results">
   <p class="title has-text-centered"></p>
-  <div class="Results" id="search-results">
-    <h5 id="zipDistance"></h5>
+  <div class="results" id="search-results">
+
   </div>
-  
-
-
 </section>
-</main>
+
 
 
 
@@ -128,19 +126,6 @@
           </form>
         </div>
       </div> -->
-
-
-
-
-   
-
-
-
-  
-  
-  
-
-
 
   <script src="./js/script.js"></script>
 </body>
