@@ -141,7 +141,7 @@ function displayPet(pets, location, distance) {
     var img = document.createElement("img");
     img.src = pets[i].attributes.pictureThumbnailUrl;
     img.alt = "Picture is not available";
-    img.setAttribute("style", "width:200px; height:200px; ");
+    img.setAttribute("style", "width:200px; height:200px; padding: 20px;");
     petCard.appendChild(img);
 
     // creating the  name paragraph
