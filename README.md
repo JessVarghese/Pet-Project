@@ -5,9 +5,11 @@
   
   ## Description
     
-  The Pet Project is a simple mobile-first application that allows a user to easily find a dog or cat to potentially adopt.
+  The Pet Project is a simple mobile-first application that allows a user to easily retrieve information about a dog or cat to potentially adopt.
 
-  The user can cheese with a dog or cat to search for, as well as input their zip code to view the distance between their location and the pet's location.
+  The user can choose with a dog or cat to search for, as well as input their zip code to view the distance between their location and the pet's location.
+
+  This application uses RescueGroups.org RESTful API and ZipCodeAPI.
 
 
 
@@ -45,13 +47,16 @@
    * [Bulma](https://bulma.io/)
    * HTML
    * Javascript
+   * REST API
 
 ## Future Development
     This application is currently under development to make fixes to the zip API and add additional pet databases.
 
 ## Contributors
 
-    Jess Varghese, Abeer Tannous, and Mac Glenn.
+    Jess Varghese(Version 1 & Current Version)
+    
+    Abeer Tannous, and Mac Glenn (Version 1)
 
 ## Questions
     If you have any questions about the repo, open an issue:
